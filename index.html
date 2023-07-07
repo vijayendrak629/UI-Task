@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>User Dashboard</title>
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding-top: 100px;
+    }
+
+    .card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+      background-color: #1A213A;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .form-container {
+      padding: 30px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-container .form-group label {
+      font-weight: bold;
+    }
+
+    .form-container .form-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .form-container .form-group input,
+    .form-container .form-group select,
+    .form-container .form-group textarea {
+      width: 100%;
+      padding: 5px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+
+    .form-container .form-group button {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .dashboard-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding-top: 100px;
+    }
+
+    .dashboard-container h2 {
+      margin-bottom: 30px;
+    }
+
+    .todo-form {
+      margin-bottom: 20px;
+    }
+
+    .todo-list td:last-child {
+      text-align: right;
+    }
+
+    .navbar {
+      background-color: #343a40;
+    }
+
+    .navbar-brand {
+      color: #fff;
+    }
+
+    .navbar-brand:hover,
+    .navbar-brand:focus {
+      color: #fff;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link:focus {
+      color: #fff;
+    }
+
+    .navbar-nav .active>.nav-link {
+      color: #fff;
+      background-color: #007bff;
+    }
+
+    .navbar-nav .active>.nav-link:hover,
+    .navbar-nav .active>.nav-link:focus {
+      background-color: #007bff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">User Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Register</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Login Page -->
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h2>Login</h2>
+      </div>
+      <div class="form-container">
+        <form>
+          <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Registration Page -->
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h2>Registration</h2>
+      </div>
+      <div class="form-container">
+        <form>
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select class="form-control" id="gender" required>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="image">Profile Image:</label>
+            <input type="file" class="form-control-file" id="image">
+          </div>
+          <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea class="form-control" id="address" rows="3" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="city">City:</label>
+            <input type="text" class="form-control" id="city" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" required>
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" class="form-control" id="confirmPassword" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- User Dashboard -->
+  <div class="dashboard-container">
+    <h2>User Dashboard</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Welcome, John Doe!</h3>
+        <p>Basic details:</p>
+        <ul>
+          <li>Name: John Doe</li>
+          <li>Email: johndoe@example.com</li>
+          <li>Gender: Male</li>
+          <li>Address: 123 Street, City</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h3>Todo List</h3>
+        <form class="todo-form">
+          <div class="form-group">
+            <label for="todoInput">Add Todo:</label>
+            <input type="text" class="form-control" id="todoInput" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+        <table class="table todo-list">
+          <thead>
+            <tr>
+              <th>Todo</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Todo 1</td>
+              <td>
+                <button class="btn btn-sm btn-danger">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Todo 2</td>
+              <td>
+                <button class="btn btn-sm btn-danger">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
